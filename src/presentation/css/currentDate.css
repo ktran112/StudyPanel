@@ -1,11 +1,13 @@
 #currentDateNode {
-    -fx-background-color:  #D3D3D3;
-    -fx-border-color: #333333; /* Hex, rgb, or named colors */
-    -fx-border-width: 4px;
-    -fx-border-style: solid; /* solid, dashed, dotted, segment */
-    -fx-border-radius: 10px; /* Optional: Rounds the border */
-    -fx-background-radius: 10px;
+    -fx-background-color: #333333, #D3D3D3;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 4, 2;
     -fx-alignment: center;
+}
+
+#currentDateWeekday
+{
+    -fx-font-size: 1.5em;
 }
 
 #currentDateLabel {

@@ -7,4 +7,15 @@
     -fx-pref-height: 400px;
 }
 
+.button {
+    /* Layer 1 (Border color), Layer 2 (Background color) */
+    -fx-background-color: #333333, #aaaaaa;
+
+    /* Layer 1 starts at 0px, Layer 2 starts at 1px inward */
+    -fx-background-insets: 0, 1;
+
+    /* Layer 1 radius is 10px, Layer 2 radius is 9px */
+    -fx-background-radius: 2, 1;
+}
+
 

@@ -1,0 +1,18 @@
+#pomodoroNode
+{
+    -fx-background-color: #111111, #bbbbbb;
+    /* SVG Path for a regular hexagon (pointy-topped) */
+    -fx-font-size: 0.7em;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 4, 2;
+}
+
+#pomodoroLabel
+{
+    -fx-font-size: 1.4em;
+}
+
+#pomodoroTimer
+{
+    -fx-font-size: 3em;
+}
