@@ -1,4 +1,6 @@
 #quoteOfDay
 {
-    -fx-font-style: italic;
+    -fx-font-size: 1em;
+    -fx-font-style: oblique;
+    -fx-font-family: "Montserrat Thin";
 }
