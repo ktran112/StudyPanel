@@ -1,0 +1,10 @@
+#tabPaneRoot
+{
+    -fx-font-family: K2D;
+    -fx-tab-min-height: 20px;
+    -fx-tab-max-height: 20px;
+    -fx-pref-width: 600px;
+    -fx-pref-height: 400px;
+}
+
+

@@ -1,0 +1,30 @@
+#nextEventNode
+{
+    -fx-background-color:  #D3D3D3;
+    -fx-border-color: #333333; /* Hex, rgb, or named colors */
+    -fx-border-width: 2px;
+    -fx-border-style: solid; /* solid, dashed, dotted, segment */
+    -fx-border-radius: 10px; /* Optional: Rounds the border */
+    -fx-background-radius: 10px;
+    -fx-alignment: center;
+}
+
+#nextEventLabel
+{
+    -fx-font-size: 1em;
+    -fx-alignment: center;
+}
+
+#nextEventDateLabel
+{
+    -fx-font-size: 5em;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+#nextEventDescLabel
+{
+    -fx-font-size: 0.8em;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}

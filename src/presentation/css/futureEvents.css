@@ -1,0 +1,24 @@
+#futureEventsNode
+{
+    -fx-background-color:  #D3D3D3;
+    -fx-border-color: #333333; /* Hex, rgb, or named colors */
+    -fx-border-width: 2px;
+    -fx-border-style: solid; /* solid, dashed, dotted, segment */
+    -fx-border-radius: 10px; /* Optional: Rounds the border */
+    -fx-background-radius: 10px;
+    -fx-alignment: center;
+}
+
+#futureEventsTopDate, #futureEventsBottomDate
+{
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-size: 2.2em;
+}
+
+#futureEventsTopDesc, #futureEventsBottomDesc
+{
+    -fx-font-size: 0.8em;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}

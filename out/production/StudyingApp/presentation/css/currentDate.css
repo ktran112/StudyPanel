@@ -1,0 +1,15 @@
+#currentDateNode {
+    -fx-background-color:  #D3D3D3;
+    -fx-border-color: #333333; /* Hex, rgb, or named colors */
+    -fx-border-width: 4px;
+    -fx-border-style: solid; /* solid, dashed, dotted, segment */
+    -fx-border-radius: 10px; /* Optional: Rounds the border */
+    -fx-background-radius: 10px;
+    -fx-alignment: center;
+}
+
+#currentDateLabel {
+    -fx-font-size: 3.5em;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
