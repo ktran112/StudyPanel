@@ -3,6 +3,7 @@
     -fx-background-insets: 0, 2;
     -fx-background-radius: 4, 2;
     -fx-alignment: center;
+    -fx-font-family: K2D;
 }
 
 #currentDateWeekday

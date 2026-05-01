@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import controller.CurrentDateController;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,11 +19,13 @@ public class StudyingApp extends Application
     {
          final Parent root;
          final Scene scene;
+         final CurrentDateController cdn;
 
          root = FXMLLoader.load(FXMLDirectory);
 
          scene = new Scene(root);
         // scene.getStylesheets().add(CSSDirectory);
+
 
          primary.setScene(scene);
          primary.show();
