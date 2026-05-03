@@ -27,6 +27,10 @@ public class DynamicFontScaler
     private static final double SUBHEAD_MIN_SIZE = 14;
     private static final double SUBHEAD_MAX_SIZE = 28;
 
+    private static final double BIG_BODY_DIVISOR = 50;
+    private static final double BIG_BODY_MIN_SIZE= 12;
+    private static final double BIG_BODY_MAX_SIZE= 24;
+
     private static final double BODY_DIVISOR     = 60;
     private static final double BODY_MIN_SIZE    = 12;
     private static final double BODY_MAX_SIZE    = 18;
@@ -167,6 +171,17 @@ public class DynamicFontScaler
             applyScalableText(node, root, SUBHEAD_DIVISOR, SUBHEAD_MIN_SIZE);
         } else {
             applyScalableText(node, root, SUBHEAD_DIVISOR);
+        }
+    }
+
+    public static void applyBigBodyScaling(final Node node, final Region root, final boolean clamp, final boolean minOnly)
+    {
+        if (clamp) {
+            applyScalableText(node, root, BIG_BODY_DIVISOR, BIG_BODY_MIN_SIZE, BIG_BODY_MAX_SIZE);
+        } else if (minOnly) {
+            applyScalableText(node, root, BIG_BODY_DIVISOR, BIG_BODY_MIN_SIZE);
+        } else {
+            applyScalableText(node, root, BIG_BODY_DIVISOR);
         }
     }
 

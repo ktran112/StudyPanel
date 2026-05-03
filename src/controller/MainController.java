@@ -27,6 +27,9 @@ public class MainController
     private FutureEventsController futureEventsController;
 
     @FXML
+    private PomodoroController pomodoroController;
+
+    @FXML
     private final void initialize()
     {
         this.currentDateController.scaleAll(this.tabPaneRoot);
@@ -34,5 +37,6 @@ public class MainController
         this.taskButtonsController.scaleAll(this.tabPaneRoot);
         this.calendarButtonsController.scaleAll(this.tabPaneRoot);
         this.futureEventsController.scaleAll(this.tabPaneRoot);
+        this.pomodoroController.scaleAll(this.tabPaneRoot);
     }
 }
