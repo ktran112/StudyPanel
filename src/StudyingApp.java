@@ -26,7 +26,6 @@ public class StudyingApp extends Application
          scene = new Scene(root);
         // scene.getStylesheets().add(CSSDirectory);
 
-
          primary.setScene(scene);
          primary.show();
     }

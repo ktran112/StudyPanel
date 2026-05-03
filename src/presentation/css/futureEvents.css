@@ -3,6 +3,7 @@
     -fx-background-insets: 0, 2;
     -fx-background-radius: 4, 2;
     -fx-alignment: center;
+    -fx-font-family: K2D;
 }
 
 #futureEventsTopDate, #futureEventsBottomDate
@@ -17,4 +18,10 @@
     -fx-font-size: 0.8em;
     -fx-alignment: center;
     -fx-wrap-text: true;
+}
+
+#futureEventsSeparator .line
+{
+    -fx-background-color: #000000;
+    -fx-border-color: transparent;
 }

@@ -9,19 +9,14 @@
 
 .button
 {
-    /* Layer 1 (Border color), Layer 2 (Background color) */
     -fx-background-color: #333333, #aaaaaa;
-
-    /* Layer 1 starts at 0px, Layer 2 starts at 1px inward */
-    -fx-background-insets: 0, 1;
-
-    /* Layer 1 radius is 10px, Layer 2 radius is 9px */
-    -fx-background-radius: 2, 1;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 4, 2;
 }
 
 .button:hover
 {
     -fx-background-color: #333333, #cccccc;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
 }

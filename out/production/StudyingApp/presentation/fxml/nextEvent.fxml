@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<GridPane fx:id="nextEventNode" stylesheets="@../css/nextEvent.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NextEventController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints fillHeight="false" percentHeight="20.0" />
+      <RowConstraints fillHeight="false" percentHeight="40.0" />
+      <RowConstraints fillHeight="false" percentHeight="40.0" />
+   </rowConstraints>
+   <children>
+      <Label fx:id="nextEventLabel" alignment="TOP_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="NEXT EVENT" textAlignment="CENTER">
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin></Label>
+      <Label fx:id="nextEventDate" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="20" textAlignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="-100.0" left="-100.0" right="-100.0" top="-100.0" />
+         </GridPane.margin>
+      </Label>
+      <TextFlow fx:id="nextEventTextFlow" textAlignment="CENTER" GridPane.rowIndex="2" VBox.vgrow="ALWAYS">
+         <Text fx:id="nextEventDesc" text="Super Important Event" textAlignment="CENTER" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="20.0" left="2.0" right="2.0" top="-8.0" />
+            </GridPane.margin>
+         </Text>
+         <GridPane.margin>
+            <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+         </GridPane.margin>
+      </TextFlow>
+   </children>
+</GridPane>

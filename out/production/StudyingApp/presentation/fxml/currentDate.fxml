@@ -3,18 +3,21 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <VBox fx:id="currentDateNode" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../css/currentDate.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CurrentDateController">
    <children>
       <Label fx:id="currentDateWeekday" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Monday" textAlignment="CENTER" wrapText="true" />
       <Label fx:id="currentDateLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="MAY 15" textAlignment="CENTER">
          <VBox.margin>
-            <Insets top="-10.0" />
+            <Insets />
          </VBox.margin>
       </Label>
-      <Label fx:id="currentDateDesc" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Nothing in particular today" textAlignment="CENTER" wrapText="true">
-         <VBox.margin>
-            <Insets bottom="6.0" />
-         </VBox.margin></Label>
+      <TextFlow fx:id="currentDateTextFlow" textAlignment="CENTER" VBox.vgrow="NEVER">
+         <children>
+            <Text fx:id="currentDateDesc" focusTraversable="true" text="This is a very very very very very very very  long sentence" textAlignment="CENTER" />
+         </children>
+      </TextFlow>
    </children>
 </VBox>

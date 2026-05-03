@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="futureEventsNode" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../css/futureEvents.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FutureEventsController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints fillHeight="false" maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="false" maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label fx:id="futureEventsTopDate" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="22" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Label fx:id="futureEventsBottomDate" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="28" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Label fx:id="futureEventsTopDesc" text="Super Serious ultra super duper serious quantum physics final super duper exam" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="futureEventsBottomDesc" text="Super Serious ultra super duper serious quantum physics final super duper exam" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </GridPane.margin>
+      </Label>
+      <Separator fx:id="futureEventsSeparator" maxWidth="1.7976931348623157E308" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </GridPane.margin>
+      </Separator>
+   </children>
+</GridPane>

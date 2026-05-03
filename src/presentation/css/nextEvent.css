@@ -3,6 +3,7 @@
     -fx-background-insets: 0, 2;
     -fx-background-radius: 4, 2;
     -fx-alignment: center;
+    -fx-font-family: K2D;
 }
 
 #nextEventLabel
@@ -11,14 +12,14 @@
     -fx-alignment: center;
 }
 
-#nextEventDateLabel
+#nextEventDate
 {
     -fx-font-size: 5em;
     -fx-text-alignment: center;
     -fx-alignment: center;
 }
 
-#nextEventDescLabel
+#nextEventDesc
 {
     -fx-font-size: 0.8em;
     -fx-alignment: center;
