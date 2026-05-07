@@ -3,32 +3,37 @@ package utility;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.NumberBinding;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 
 public class DynamicFontScaler
 {
     private static final double HERO_DIVISOR     = 12;
-    private static final double HERO_MIN_SIZE    = 24;
+    private static final double HERO_MIN_SIZE    = 40;
     private static final double HERO_MAX_SIZE    = 80;
 
-    private static final double TITLE_DIVISOR    = 20;
-    private static final double TITLE_MIN_SIZE   = 18;
-    private static final double TITLE_MAX_SIZE   = 48;
+    private static final double TITLE_DIVISOR    = 16;
+    private static final double TITLE_MIN_SIZE   = 34;
+    private static final double TITLE_MAX_SIZE   = 60;
+
+    private static final double BIG_TITLE_DIVISOR  = 20;
+    private static final double BIG_TITLE_MIN_SIZE = 30;
+    private static final double BIG_TITLE_MAX_SIZE = 48;
 
     private static final double HEADER_DIVISOR   = 25;
-    private static final double HEADER_MIN_SIZE  = 16;
+    private static final double HEADER_MIN_SIZE  = 28;
     private static final double HEADER_MAX_SIZE  = 42;
 
     private static final double SECTION_DIVISOR  = 30;
-    private static final double SECTION_MIN_SIZE = 16;
+    private static final double SECTION_MIN_SIZE = 26;
     private static final double SECTION_MAX_SIZE = 36;
 
     private static final double SUBHEAD_DIVISOR  = 40;
-    private static final double SUBHEAD_MIN_SIZE = 14;
+    private static final double SUBHEAD_MIN_SIZE = 24;
     private static final double SUBHEAD_MAX_SIZE = 28;
 
     private static final double BIG_BODY_DIVISOR = 50;
-    private static final double BIG_BODY_MIN_SIZE= 12;
+    private static final double BIG_BODY_MIN_SIZE= 16;
     private static final double BIG_BODY_MAX_SIZE= 24;
 
     private static final double BODY_DIVISOR     = 60;
@@ -97,6 +102,17 @@ public class DynamicFontScaler
             applyScalableText(node, root, HERO_DIVISOR, HERO_MIN_SIZE);
         } else {
             applyScalableText(node, root, HERO_DIVISOR);
+        }
+    }
+
+    public static void applyBigTitleScaling(final Node node, final Region root, final boolean clamp, final boolean minOnly)
+    {
+        if (clamp) {
+            applyScalableText(node, root, BIG_TITLE_DIVISOR, BIG_TITLE_MIN_SIZE, BIG_TITLE_MAX_SIZE);
+        } else if (minOnly) {
+            applyScalableText(node, root, BIG_TITLE_DIVISOR, BIG_TITLE_MIN_SIZE);
+        } else {
+            applyScalableText(node, root, BIG_TITLE_DIVISOR);
         }
     }
 
@@ -252,5 +268,30 @@ public class DynamicFontScaler
                                                final Region region)
     {
         parent.prefWidthProperty().bind(region.widthProperty());
+    }
+
+    /**
+     * Binds a label's maximum height to its font size, multiplied by a given
+     * factor. This enables dynamic height limits that scale with the font,
+     * useful for labels that should wrap up to N lines and then truncate.
+     *
+     * @param label      the label whose maxHeight will be bound
+     * @param multiplier the factor by which to multiply the font size
+     */
+    public static void bindMaxHeightToFontSize(final Label label,
+                                               final double multiplier)
+    {
+        label.maxHeightProperty().bind(
+                label.styleProperty().map(style -> {
+                    // Extract font size from inline style
+                    final String fontSizeKey = "-fx-font-size:";
+                    final int start = style.indexOf(fontSizeKey);
+                    if (start == -1) return 0.0;
+                    final int end = style.indexOf("px", start);
+                    if (end == -1) return 0.0;
+                    final String sizeStr = style.substring(start + fontSizeKey.length(), end).trim();
+                    return Double.parseDouble(sizeStr) * multiplier;
+                })
+        );
     }
 }

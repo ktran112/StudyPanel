@@ -2,7 +2,6 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TabPane;
-import javafx.scene.layout.VBox;
 
 public class MainController
 {
@@ -11,8 +10,6 @@ public class MainController
 
     @FXML
     private CurrentDateController currentDateController;
-    @FXML
-    private VBox currentDateNode;
 
     @FXML
     private NextEventController nextEventController;
@@ -30,6 +27,12 @@ public class MainController
     private PomodoroController pomodoroController;
 
     @FXML
+    private SessionsController sessionsController;
+
+    @FXML
+    private QuoteOfDayController quoteOfDayController;
+
+    @FXML
     private final void initialize()
     {
         this.currentDateController.scaleAll(this.tabPaneRoot);
@@ -38,5 +41,7 @@ public class MainController
         this.calendarButtonsController.scaleAll(this.tabPaneRoot);
         this.futureEventsController.scaleAll(this.tabPaneRoot);
         this.pomodoroController.scaleAll(this.tabPaneRoot);
+        this.sessionsController.scaleAll(this.tabPaneRoot);
+        this.quoteOfDayController.scaleAll(this.tabPaneRoot);
     }
 }

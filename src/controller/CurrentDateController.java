@@ -4,14 +4,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import utility.DynamicFontScaler;
 import utility.TextScalable;
 
 public class CurrentDateController implements TextScalable
 {
-    private static final int CURRENT_DATE_DESC_DIVISOR = 10;
+    private static final int CURRENT_DATE_DESC_DIVISOR = 60;
+    private static final int CURRENT_DATE_DESC_MIN = 10;
+
+    private static final double CURRENT_DATE_DESC_LINE_HEIGHT_MULTIPLIER = 3.5;
 
     @FXML
     private VBox currentDateNode;
@@ -23,15 +24,12 @@ public class CurrentDateController implements TextScalable
     private Label currentDateLabel;
 
     @FXML
-    private TextFlow currentDateTextFlow;
-
-    @FXML
-    private Text currentDateDesc;
+    private Label currentDateDesc;
 
     @FXML
     private void initialize()
     {
-            DynamicFontScaler.bindParentToRegionWidth(this.currentDateTextFlow, this.currentDateNode);
+        DynamicFontScaler.bindMaxHeightToFontSize(this.currentDateDesc, CURRENT_DATE_DESC_LINE_HEIGHT_MULTIPLIER);
     }
 
     @Override
@@ -39,7 +37,7 @@ public class CurrentDateController implements TextScalable
     {
         DynamicFontScaler.applySubheadScaling(this.currentDateWeekday, root, false, true);
         DynamicFontScaler.applyTitleScaling(this.currentDateLabel, root, false, true);
-        DynamicFontScaler.applyScalableText(this.currentDateDesc, root, 50);
+        DynamicFontScaler.applyScalableText(this.currentDateDesc, root, CURRENT_DATE_DESC_DIVISOR, CURRENT_DATE_DESC_MIN);
     }
 
 

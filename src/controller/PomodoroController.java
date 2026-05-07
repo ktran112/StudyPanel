@@ -10,6 +10,9 @@ import utility.TextScalable;
 
 public class PomodoroController implements TextScalable
 {
+    private static final int POMODORO_BIG_BUTTON_DIVISOR = 70;
+    private static final int POMODORO_BIG_BUTTON_MIN = 9;
+
     @FXML
     private GridPane pomodoroNode;
 
@@ -42,11 +45,11 @@ public class PomodoroController implements TextScalable
     public void scaleAll(final Region root)
     {
         DynamicFontScaler.applyBigBodyScaling(this.pomodoroPomodoro, root, false, true);
-        DynamicFontScaler.applyTitleScaling(this.pomodoroTimer, root, false, true);
-        DynamicFontScaler.applyScalableText(this.pomodoroMinusBig, root, 70, 9);
+        DynamicFontScaler.applyBigTitleScaling(this.pomodoroTimer, root, false, true);
+        DynamicFontScaler.applyScalableText(this.pomodoroMinusBig, root, POMODORO_BIG_BUTTON_DIVISOR, POMODORO_BIG_BUTTON_MIN);
         DynamicFontScaler.applyCaptionScaling(this.pomodoroMinusSmall, root, false, true);
         DynamicFontScaler.applyCaptionScaling(this.pomodoroAddSmall, root, false, true);
-        DynamicFontScaler.applyScalableText(this.pomodoroAddBig, root, 70, 9);
+        DynamicFontScaler.applyScalableText(this.pomodoroAddBig, root, POMODORO_BIG_BUTTON_DIVISOR, POMODORO_BIG_BUTTON_MIN);
         DynamicFontScaler.applyCaptionScaling(this.pomodoroHideTimer, root, false, true);
         DynamicFontScaler.applyCaptionScaling(this.pomodoroStop, root, false, true);
     }
